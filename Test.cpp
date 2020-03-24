@@ -5,9 +5,6 @@ using namespace phonetic;
 
 #include <string>
 using namespace std;
-
-
-
 TEST_CASE("Test replacement of v and w") {
     string text1 = "dont worry yyy";
     string text2 = "view wave yyy";
@@ -95,7 +92,6 @@ TEST_CASE("Test replacement of d and t") {
     CHECK(find(text, "doCUMEnD") == string("document"));
 
 }
-
 TEST_CASE("Test replacement of o and u") {
     string text = "count acount out";
     CHECK(find(text, "acount") == string("acount"));
@@ -136,7 +132,6 @@ TEST_CASE("Test replacement of y and i") {
     CHECK(find(text, "IiI") == string("illuminati"));    
 
 }
-
 TEST_CASE("Test replacement of all cases") {
     string text1 = "this is a new project";
     string text2 = "good luck in this semester";
@@ -158,9 +153,6 @@ TEST_CASE("Test replacement of all cases") {
     CHECK(find(text2, "guut") == string("good"));    
     CHECK(find(text2, "zeMesDer") == string("semester"));    
     CHECK(find(text2, "semesTer") == string("semester"));    
-       
-
-
 }
 TEST_CASE("Test replacement of lower-case and upper-case") {
     string text = "Happi xxx yyy";
