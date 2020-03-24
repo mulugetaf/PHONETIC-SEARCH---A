@@ -47,8 +47,6 @@ for (int i = 0; i < words; i++){
 
 }
 
-    throw (s2 + " is not a full word in the sentence");    
-    
     return s2;
     };
 
