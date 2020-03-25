@@ -34,7 +34,7 @@ TEST_CASE("Test replacement of b f and p") {
     CHECK(find(text, "packblib") == string("backflip"));
 
 }
-TEST_CASE("Test replacement of g and i") {
+TEST_CASE("Test replacement of g and j") {
  string text1 = "jpeg yyy xxyy";
  string text2 = "judge judi xxyy";
  //case 1
@@ -71,10 +71,10 @@ TEST_CASE("Test replacement of s and z") {
     CHECK(find(text, "zeuz") == string("zeus"));
     CHECK(find(text, "seuZ") == string("zeus"));
     
-    CHECK(find(text, "SIZE") == string("size"));
-    CHECK(find(text, "ZiSe") == string("size"));
-    CHECK(find(text, "ZIsE") == string("size"));
-    CHECK(find(text, "SISe") == string("size"));
+    CHECK(find(text, "SIZE") == string("siZe"));
+    CHECK(find(text, "ZiSe") == string("siZe"));
+    CHECK(find(text, "ZIsE") == string("siZe"));
+    CHECK(find(text, "SISe") == string("siZe"));
 
 
 }
@@ -127,9 +127,9 @@ TEST_CASE("Test replacement of y and i") {
     CHECK(find(text, "WIfY") == string("wifi"));    
     CHECK(find(text, "wYfI") == string("wifi"));   
 
-    CHECK(find(text, "yyy") == string("illuminati"));    
-    CHECK(find(text, "YIY") == string("illuminati"));    
-    CHECK(find(text, "IiI") == string("illuminati"));    
+    CHECK(find(text, "yyy") == string("yyy"));    
+    CHECK(find(text, "YIY") == string("yyy"));    
+    CHECK(find(text, "IiI") == string("yyy"));    
 
 }
 TEST_CASE("Test replacement of all cases") {
@@ -145,7 +145,7 @@ TEST_CASE("Test replacement of all cases") {
     CHECK(find(text1, "froject") == string("project"));    
     CHECK(find(text1, "PrUject") == string("project"));    
     CHECK(find(text1, "proGect") == string("project"));    
-    CHECK(find(text2, "pruJecd") == string("project"));    
+    CHECK(find(text1, "pruJecd") == string("project"));    
     CHECK(find(text2, "goUt") == string("good"));    
     CHECK(find(text2, "jOUd") == string("good"));    
     CHECK(find(text2, "gUUd") == string("good"));    
@@ -183,7 +183,7 @@ TEST_CASE("Test replacement of lower-case and upper-case") {
     CHECK(find(text, "HaPPI") == string("Happi"));
     
 }
-
+    //test exception
 TEST_CASE("throwing errors"){
     string text = "this is not omg";
    
@@ -194,6 +194,7 @@ TEST_CASE("throwing errors"){
     CHECK_THROWS(find(text,"IIs"));
     CHECK_THROWS(find(text,"THISS"));
     CHECK_THROWS(find(text,"UMMG"));
+    CHECK_THROWS(find(text,""));
 
 
 }
