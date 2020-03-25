@@ -195,6 +195,7 @@ TEST_CASE("throwing errors"){
     CHECK_THROWS(find(text,"THISS"));
     CHECK_THROWS(find(text,"UMMG"));
     CHECK_THROWS(find(text,""));
+    CHECK_THROWS(find("","this"));
 
 
 }
